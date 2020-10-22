@@ -1,24 +1,22 @@
 <?php
-include "../../controller/koneksi.php";
+include '../../controller/koneksi.php';
 $query = "SELECT * from tb_user ORDER BY id_user ASC";
 $ambil_data = mysqli_query($koneksi, $query);
 ?>
 <br>
 <h3>Data Akun</h3>
-<div id="myTable" class="col-8">
-    <table class="table is-bordered is-striped is-narrow is-hoverable is-">
-        <thead class="table-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Username</th>
-                <th scope="col">Password</th>
-                <th scope="col">Level</th>
-                <th scope="col">Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <!-- ini yang akan di ulang-->
+<table class="table is-striped" style="width:100%" id="example">
+	<thead>
+		<tr>
+			<th>#</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Level</th>
+                <th>Aksi</th>
+		</tr>
+	</thead>
+	<tbody>
+		
             <?php
             $no = 0;
             while ($getdata = mysqli_fetch_assoc($ambil_data)) {
@@ -32,7 +30,7 @@ $ambil_data = mysqli_query($koneksi, $query);
                     <td><a href="delete.php?id=<?php echo $getdata['id_user'] ?>">
                             <button class="button is-danger is-rounded">hapus</button>
                         </a>
-                        <a href="index.php?menu=members&act=editmembers&id_user=<?php echo $getdata['id_user'] ?>">
+                        <a href="index.php?act=form&id_user=<?php echo $getdata['id_user'] ?>">
                             <button class="button is-primary is-rounded">edit</button>
                         </a>
                     </td>
@@ -40,9 +38,7 @@ $ambil_data = mysqli_query($koneksi, $query);
             <?php
             }
             ?>
-            <!--akhir dari data yang diulang-->
+	</tbody>
+</table>
 
-        </tbody>
-    </table>
-</div>
-</div>
+

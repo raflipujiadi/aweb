@@ -49,9 +49,9 @@
 			}
 			?>
 			<label class="sr-only">Username</label>
-			<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+			<input type="text" name="username" id="username" class="form-control" placeholder="Username" required="" autofocus="">
 			<label class="sr-only">Password</label>
-			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+			<input type="password" name="password" id="passwordd" class="form-control" placeholder="Password" required="">
 			<div class="checkbox mb-3">
 				<!-- <label>
 				<input type="checkbox" value="remember-me"> Remember me
@@ -60,7 +60,7 @@
 			<button class="btn btn-lg btn-primary btn-block" value="LOGIN" type="submit">Sign in</button>
 			<p class="mt-5 mb-3 text-muted">2017-2019</p>
 		</form>
-		<a href="view/signup.php"><button class="btn btn-lg btn-dark" value="SIGNUP">Sign up</button></a>
+		<a href="controller/signup.php"><button class="btn btn-lg btn-dark" value="SIGNUP">Sign up</button></a>
 	</div>
 </body>
 

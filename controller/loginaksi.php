@@ -65,17 +65,4 @@ if ($cek > 0) {
 } else {
 	header("location:../login.php?pesan=gagal");
 }
-//$response = json_decode($verify);
 
-//if($response->success){ // Jika proses validasi captcha berhasil
-
-//	echo "<h2>Captcha Valid</h2>";
-//	echo "Yes, you're human (Anda adalah manusia)<hr>";
-//	echo "<b>Nama :</b><br>".$_POST['username']."<br><br>";
-//	echo "<b>Email :</b><br>".$_POST['password']."<br><br>";
-// cek apakah username dan password di temukan pada database
-//}else{ // Jika captcha tidak valid
-//	echo "<h2>Captcha Tidak Valid</h2>";
-//	echo "Ohh sorry, you're not human (Anda bukan manusia)<hr>";
-//	echo "Silahkan klik kotak I'm not robot (reCaptcha) untuk verifikasi";
-//}

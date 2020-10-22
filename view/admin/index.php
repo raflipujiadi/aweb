@@ -1,6 +1,6 @@
 <?php
-include("../templates/header.php");
-include("../templates/navbar.php");
+include('../templates/header.php');
+include('../templates/navbar.php');
 ?>
 
 <!-- cek apakah sudah login -->
@@ -13,7 +13,7 @@ if ($_SESSION['level'] != "admin") {
 ?>
 <main>
     <?php
-    include("halaman.php");
+    include('halaman.php');
     ?>
 </main>
 <!-- finish content -->
@@ -29,7 +29,7 @@ if ($_SESSION['level'] != "admin") {
     })();
 </script>
 <script type="text/javascript">
-    function loadData() {
+	function loadData() {
         $.ajax({ //create an ajax request to display.php
             method: "post",
             url: "http://localhost/aweb/model/dataBarang.php",
@@ -66,6 +66,6 @@ if ($_SESSION['level'] != "admin") {
     }
     //dialog();
 </script>
-</body>
+
 
 </html>

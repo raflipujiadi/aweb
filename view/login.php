@@ -44,9 +44,9 @@
 			}
 			?>
 			<label class="sr-only">Username</label>
-			<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+			<input type="text" name="username" id="username" class="form-control" placeholder="Username" required="" autofocus="">
 			<label class="sr-only">Password</label>
-			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+			<input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
 			<div class="checkbox mb-3">
 				<!-- <label>
 				<input type="checkbox" value="remember-me"> Remember me
