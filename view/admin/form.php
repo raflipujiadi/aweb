@@ -8,27 +8,33 @@ $getdata = mysqli_fetch_assoc($ambil_data);
 <h3>Edit Data Member</h3>
 <form action="simpan.php" method="POST">
     <div class="form">
-        <label for="username">Username</label>
-        <input name="username" type="text" id="username" class="form-control" placeholder="Input Username" value="<?php if (isset($id)) echo $getdata['username']; ?>">
+        <label class="label" for="username">Username</label>
+        <input name="username" type="text" id="username" class="input" placeholder="Input Username" value="<?php if (isset($id)) echo $getdata['username']; ?>">
     </div>
     <div class="form">
-        <label for="password">Password</label>
-        <input name="password" type="password" id="password" class="form-control" placeholder="Input Password" value="<?php if (isset($id)) echo $getdata['password']; ?>">
+        <label class="label" for="password">Password</label>
+        <input name="password" type="password" id="password" class="input" placeholder="Input Password" value="<?php if (isset($id)) echo $getdata['password']; ?>">
     </div>
 
     <div class="form">
-        <label for="level">Level</label>
-        <select name="level" id="level" class="form">
-            <option value="admin" <?php if (isset($getdata) && $getdata['level'] == "admin") echo 'selected' ?>>admin</option>
-            <option value="managers" <?php if (isset($getdata) && $getdata['level'] == "managers") echo 'selected' ?>>managers</option>
-            <option value="karyawan" <?php if (isset($getdata) && $getdata['level'] == "karyawan") echo 'selected' ?>>karyawan</option>
+        <label class="label" for="level">Level</label>
+        <select name="level" id="level" class="select">
+            <option value="A" <?php if (isset($getdata) && $getdata['level'] == "A") echo 'selected' ?>>admin</option>
+            <option value="M" <?php if (isset($getdata) && $getdata['level'] == "M") echo 'selected' ?>>managers</option>
+            <option value="K" <?php if (isset($getdata) && $getdata['level'] == "K") echo 'selected' ?>>karyawan</option>
         </select>
     </div>
 
     <div class="form">
-        <input name="user" type="hidden" id="id" class="form-control" value="<?php echo $getdata['id_user'] ?>">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <a href="home.php"><button type="button" class="btn btn-danger">Batal</button></a>
+        <input class="label" name="id_user" type="hidden" id="id_user" class="input" value="<?php echo $getdata['id_user'] ?>">
+    </div><br>
+    <div class="field is-grouped">
+  <div class="control">
+    <button type="submit" class="button is-link">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div>
+</div>
 </form>
 

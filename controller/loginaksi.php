@@ -30,19 +30,19 @@ if ($cek > 0) {
 	// cek jika user login sebagai admin
 	//		switch ($data['level']) {
 	//			case 'admin':
-	if ($data['level'] == 'admin') {
+	if ($data['level'] == 'A') {
 		// buat session login dan username
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "admin";
 		// alihkan ke halaman dashboard admin
 		header("location:../view/admin/index.php");
-	} else if ($data['level'] == 'karyawan') {
+	} else if ($data['level'] == 'K') {
 		// buat session login dan username
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "karyawan";
 		// alihkan ke halaman dashboard karyawan
 		header("location:../view/karyawan/index.php");
-	} else if ($data['level'] == "managers") {
+	} else if ($data['level'] == "M") {
 		// buat session login dan username
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "managers";

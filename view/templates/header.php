@@ -11,9 +11,10 @@
 	
     <link rel="stylesheet" href="../../assets/css/bulma/bulma.min.css">
     <link rel="stylesheet" href="../../assets/css/bulma/admin.css">
-	<script type="text/javascript" href="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" href="https://cdn.datatables.net/1.10.22/js/dataTables.bulma.min.js"></script>
-	<link type="stylesheet" rel="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bulma.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bulma.min.css">
 	<script type="text/javascript">
 		$(document).ready(function() {
     $('#example').DataTable();

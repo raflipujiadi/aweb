@@ -27,7 +27,7 @@ $ambil_data = mysqli_query($koneksi, $query);
                     <td><?php echo $getdata['username'] ?></td>
                     <td><?php echo $getdata['password'] ?></td>
                     <td><?php echo $getdata['level'] ?></td>
-                    <td><a href="delete.php?id=<?php echo $getdata['id_user'] ?>">
+                    <td><a href="delete.php?id_user=<?php echo $getdata['id_user'] ?>">
                             <button class="button is-danger is-rounded">hapus</button>
                         </a>
                         <a href="index.php?act=form&id_user=<?php echo $getdata['id_user'] ?>">
