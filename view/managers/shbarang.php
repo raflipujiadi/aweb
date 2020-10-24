@@ -4,7 +4,7 @@ $query = "SELECT * from tb_barang ORDER BY id_barang ASC";
 $ambil_data = mysqli_query($koneksi, $query);
 ?>
 <br>
-<h3>Data Akun</h3>
+<h3>Data Barang</h3>
 <div class="col-8">
     <table class="table table-striped table-bordered" id="tabel-data">
         <thead class="table-dark">

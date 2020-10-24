@@ -8,15 +8,25 @@ $getdata = mysqli_fetch_assoc($ambil_data);
 <h3>Edit Data Barang</h3>
 <form action="simpan.php" method="POST">
     <div class="form">
-        <label class="label" for="password">Kode Barang</label>
-        <input name="id_barang" type="text" id="id_barang" class="input" placeholder="Input ID barang" value="<?php if (isset($id)) echo $getdata['password']; ?>">
-    </div>
-    <div class="form">
         <label class="label" for="nama_barang">Nama Barang</label>
-        <input name="nama_barang" type="text" id="nama_barang" class="input" placeholder="Input Nama Barang" value="<?php if (isset($id)) echo $getdata['username']; ?>">
+        <input name="nama_barang" type="text" id="nama_barang" class="input" placeholder="Input Nama barang" value="<?php if (isset($id)) echo $getdata['nama_barang']; ?>">
     </div>
+	<br>
+	<div class="file is-boxed">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+  </label>
+</div>
     <div class="form">
-        <input class="label" name="id_barang" type="hidden" id="id_barang" class="input" value="<?php echo $getdata['id_user'] ?>">
+        <input class="label" name="id_barang" type="hidden" id="id_barang" class="input" value="<?php echo $getdata['id_barang'] ?>">
     </div><br>
     <div class="field is-grouped">
   <div class="control">
