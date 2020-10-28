@@ -33,7 +33,9 @@ $getdata = mysqli_fetch_assoc($ambil_data);
     <button type="submit" class="button is-link">Submit</button>
   </div>
   <div class="control">
-    <button class="button is-link is-light">Cancel</button>
+    <a href="index.php?act=shmembers" >
+	<button type="button" class="button is-link is-light">Cancel</button>
+	</a>
   </div>
 </div>
 </form>

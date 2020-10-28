@@ -31,7 +31,7 @@ $menu 			= isset($_GET['menu']) ? $_GET['menu'] : '';
                             <li><a class="<?php
                                             if ($menu == "fr")
                                                 echo "is-active";
-                                            ?>" href="?menu=fr&act=form">Remove a member</a></li>
+                                            ?>" href="?menu=fr&act=form">Form barang</a></li>
                         </ul>
                     </li>
                     <li><a>Invitations</a></li>
