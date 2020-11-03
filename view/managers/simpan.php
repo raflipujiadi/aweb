@@ -8,31 +8,24 @@ $tujuan = "../../assets/img/barang/".$tj;
 $terupload = move_uploaded_file($fileName, $tujuan);
 
 
-if($terupload){
+if($terupload && $id_barang != NULL){
 	
-if ($id_barang != NULL) {
     $query = "UPDATE tb_barang SET nama_barang='$nama_barang',
 				img='$tj'
 				WHERE id_barang='$id_barang'";
     mysqli_query($koneksi, $query);
+	header ('location:http://localhost/aweb/view/managers/index.php?act=shbarang');
     echo 'data berhasil diubah';
 }else{
     $query = "INSERT INTO tb_barang SET nama_barang='$nama_barang',
 				img='$tj'
 				";
     mysqli_query($koneksi, $query);
+	header ('location:http://localhost/aweb/view/managers/index.php?act=shbarang');
     echo 'data berhasil disimpan';
 }
 echo '<br> Terima Kasih';
 
-}else{
 	echo 'gagal upload !';
-}
+	header ('location:http://localhost/aweb/view/managers/index.php?act=shbarang');
 ?>
-<script type="text/javascript">
-	window.location.href = "http://localhost/aweb/view/managers/index.php?act=shbarang";
-</script>
-
-
-
-

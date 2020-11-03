@@ -1,17 +1,21 @@
 <?php
 include '../../controller/koneksi.php';
-$id = isset($_GET['id_barang']) ? $_GET['id_barang'] : '';
-$query = "SELECT * from tb_barang WHERE id_barang='$id'";
+$id_barang = isset($_GET['id_barang']) ? $_GET['id_barang'] : '';
+$query = "SELECT * from tb_barang WHERE id_barang='$id_barang'";
 $ambil_data = mysqli_query($koneksi, $query);
 $getdata = mysqli_fetch_assoc($ambil_data);
 
-
+if (!$id_barang){
+	echo '<h1>Tambah Barang</h1>';
+}else{
+	echo '<h3>Edit Data Barang</h3>';
+}
 ?>
-<h3>Edit Data Barang</h3>
+
 <form action="simpan.php" method="POST" enctype="multipart/form-data">
     <div class="form">
         <label class="label" for="nama_barang">Nama Barang</label>
-        <input name="nama_barang" type="text" id="nama_barang" class="input" placeholder="Input Nama barang" value="<?php if (isset($id)) echo $getdata['nama_barang']; ?>">
+        <input name="nama_barang" type="text" id="nama_barang" class="input" placeholder="Input Nama barang" value="<?php if (isset($id_barang)) echo $getdata['nama_barang']; ?>">
     </div>
 	<br>
 	<div class="file is-boxed">

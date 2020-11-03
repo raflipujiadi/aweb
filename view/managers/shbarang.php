@@ -29,7 +29,7 @@ $ambil_data = mysqli_query($koneksi, $query);
                     <td><?php echo $databrg['id_barang'] ?></td>
                     <td><?php echo $databrg['nama_barang'] ?></td>
                     <td><?php echo $databrg['img'] ?></td>
-                    <td><a href="hapus.php?id_barang=<?php echo $databrg['id_barang'] ?>">
+                    <td><a href="delete.php?id_barang=<?php echo $databrg['id_barang'] ?>">
                             <button class="button is-danger is-rounded">hapus</button>
                         </a>
                         <a href="index.php?act=form&id_barang=<?php echo $databrg['id_barang'] ?>">

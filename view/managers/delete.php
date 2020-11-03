@@ -1,9 +1,10 @@
 <?php
 	include "../../controller/koneksi.php";
 	
-	$id_user = $_GET['id_user'];
+	$id_barang = $_GET['id_barang'];
 	
-	$query = "DELETE FROM tb_user WHERE id_user = $id_user";
+	$query = "DELETE FROM tb_barang WHERE id_barang = $id_barang";
 	mysqli_query($koneksi,$query);
-	
-	header('location:dashboard.php');
+	header ('location:http://localhost/aweb/view/managers');
+?>
+

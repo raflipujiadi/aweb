@@ -12,6 +12,7 @@ if ($id_user != NULL) {
 				level='$level'
 				WHERE id_user='$id_user'";
     mysqli_query($koneksi, $query);
+	header ('location:http://localhost/aweb/view/admin/shmembers');
     echo 'data berhasil diubah';
 }else{
     $query = "INSERT INTO tb_user SET username='$username',
@@ -19,14 +20,12 @@ if ($id_user != NULL) {
 				level='$level'
 				";
     mysqli_query($koneksi, $query);
+	header ('location:http://localhost/aweb/view/admin/shmembers');
     echo 'data berhasil disimpan';
 }
 echo '<br> Terima Kasih';
 ?>
 
-<script type="text/javascript">
-	window.location.href = "http://localhost/aweb/view/admin/index.php?act=shmembers";
-</script>
 
 
 
