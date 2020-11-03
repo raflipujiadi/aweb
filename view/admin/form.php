@@ -4,10 +4,10 @@ $id_user = isset($_GET['id_user']) ? $_GET['id_user'] : '';
 $query = "SELECT * from tb_user WHERE id_user='$id_user'";
 $ambil_data = mysqli_query($koneksi, $query);
 $getdata = mysqli_fetch_assoc($ambil_data);
-if ($id_user){
-	echo '<h3>Edit Data Member</h3>';
-}else{
+if (!$id_user){
 	echo '<h3>Tambah Data Member</h3>';
+}else{
+	echo '<h3>Edit Data Member</h3>';
 }
 ?>
 
